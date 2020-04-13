@@ -15,14 +15,23 @@ package com.gyoomi.jdk14;
 public class InstanceofDemo
 {
 	public static void main(String[] args) {
-		Object obj = "hello java";
+//		Object obj = "hello java";
+		Object obj = 2345;
+		instanceTest(obj);
+	}
+
+	public static void instanceTest(Object obj)
+	{
 		if (obj instanceof String s)
 		{
-			System.out.println(s);
+			System.out.println(String.format("字符串：%s", s));
 		}
-		else
+		else if (obj instanceof Integer i)
 		{
-			System.out.println("obj不是字符串！！");
+			System.out.println(String.format("整数：%s", i));
+		}
+		else {
+			throw new RuntimeException("obj的类型无法处理。");
 		}
 	}
 }
