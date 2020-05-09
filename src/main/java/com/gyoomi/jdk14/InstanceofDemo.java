@@ -15,8 +15,8 @@ package com.gyoomi.jdk14;
 public class InstanceofDemo
 {
 	public static void main(String[] args) {
-//		Object obj = "hello java";
-		Object obj = 2345;
+		Object obj = "hello java";
+//		Object obj = 2345;
 		instanceTest(obj);
 	}
 
